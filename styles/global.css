@@ -42,6 +42,7 @@
 }
 
 html, body{
+  color: var(--text-body);
   font-family: var(--ff-base);
   background-color: var(--shape-background);
 

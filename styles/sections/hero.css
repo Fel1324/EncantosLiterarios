@@ -1,0 +1,81 @@
+.hero{
+  text-align: center;
+
+  .hero-image{
+    background: url("../../assets/imgs/hero-image-desktop.png") no-repeat center top / cover;
+    min-height: 29rem;
+
+    .content{
+      margin-top: 3rem;
+
+      h1{
+        width: min(100%, 41rem);
+        margin: 0 auto 1rem;
+      }
+
+      p{
+        width: min(100%, 31rem);
+        margin-inline: auto;
+        font-size: var(--body-lg);
+      }
+    }
+  }
+
+  .hero-animation{
+    margin-top: 2rem;
+    padding: 1.75rem 1.25rem;
+
+    img[src*="opened"], img[src*="crystal"]{
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .subtitle{
+      font-size: var(--subtitle);
+      width: min(100%, 71rem);
+      margin-inline: auto;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (width >= 1280px) {
+  .hero{
+    .hero-image{
+      min-height: 59.25rem;
+
+      .content{
+        margin-top: 10.25rem;
+
+        h1{
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .hero-animation{
+      margin-top: 6rem;
+      padding-inline: 2rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img[src*="opened"]{
+        width: 5.5rem;
+        height: 5.5rem;
+      }
+
+      .subtitle{
+        line-height: 2;
+      }
+
+      img[src*="crystal"]{
+        width: 4.5rem;
+        height: 4.5rem;
+        align-self: flex-end;
+        margin-left: auto;
+      }
+    }
+  }
+}
