@@ -1,0 +1,39 @@
+.container{
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.px-md{
+  padding-inline: 1.25rem;
+}
+
+.px-lg{
+  padding-inline: 2rem;
+}
+
+.btn{
+  padding-block: .75rem;
+  font-family: var(--ff-base);
+  font-size: var(--button);
+  font-weight: 700;
+
+  color: var(--text-title);
+  cursor: pointer;
+  border-radius: .5rem;
+  border: 0;
+}
+
+.primary-btn{
+  background-color: var(--pink-dark);
+  &:hover{
+    background-color: var(--pink-base);
+  }
+}
+
+.secondary-btn{
+  background-color: var(--blue-dark);
+  &:hover{
+    background-color: var(--blue-mid);
+  }
+}

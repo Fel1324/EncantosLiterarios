@@ -1,0 +1,20 @@
+.header{
+  --p-top: 1.25rem;
+  padding-top: var(--p-top);
+
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn{
+      padding-inline: 1.25rem;
+    }
+  }
+}
+
+@media screen and (width >= 1280px) {
+  .header{
+    --p-top: 3.5rem;
+  }
+}
