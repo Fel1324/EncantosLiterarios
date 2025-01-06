@@ -1,26 +1,29 @@
 .hero{
   width: 100%;
   text-align: center;
-  position: absolute;
-  z-index: 100;
+  position: relative;
+  
+  &::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    
+    background-color: var(--pink-low);
+    filter: blur(18.75rem);
+    height: 100%;
+    width: 100%;
+  }
 
   .hero-image{
-    background: url("../../assets/imgs/hero-image-desktop.png") no-repeat center top / cover;
+    background: url("../../assets/imgs/hero-image.png") no-repeat center top / cover;
     min-height: 29rem;
+
+    position: sticky;
+    z-index: 100;
 
     .content{
       margin-top: 3rem;
       position: relative;
-
-      &::before{
-        content: "";
-        background-color: var(--pink-low);
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        height: calc(100vh + 3.5rem);
-        filter: blur(18.75rem);
-      }
 
       h1{
         width: min(100%, 41rem);
@@ -81,6 +84,10 @@
 
 @media screen and (width >= 1280px) {
   .hero{
+    &::before{
+      filter: blur(68rem);
+    }
+
     .hero-image{
       min-height: 59.25rem;
 
