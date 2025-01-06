@@ -48,7 +48,6 @@
     
     margin: 2rem auto 0;
     padding: 1.75rem 1.25rem;
-
     position: relative;
     
     display: flex;
@@ -57,27 +56,66 @@
 
     .subtitle{
       margin-inline: auto;
-      opacity: .5;
-
       font-size: var(--subtitle);
       line-height: 1.4;
+      
+      span{
+        opacity: .5;
+      }
+
+      &:hover{
+        span{
+          &.first-span{
+            animation: textAppear 250ms linear forwards;
+  
+            & > strong{
+              animation: paintBlue 250ms linear forwards;
+
+            }
+          }
+  
+          &.second-span{
+            animation: textAppear 250ms linear 1s forwards;
+  
+            & > strong{
+              animation: paintBlue 250ms linear 1s forwards;
+
+            }
+          }
+  
+          &.third-span{
+            animation: textAppear 250ms linear 2s forwards;
+  
+            & > strong{
+              animation: paintBlue 250ms linear 2s forwards;
+            }
+          }
+        }
+      }
     }
 
     img[src*="opened"], img[src*="crystal"]{
       position: absolute;
       width: 2.5rem;
       height: 2.5rem;
-      opacity: 0;
+
+      transform: scale(0);
     }
 
     img[src*="opened"]{
       top: 2rem;
       right: 4.5rem;
+
+      animation: assetsAppear 3s ease-in-out;
+      animation-timeline: scroll()
     }
 
     img[src*="crystal"]{
       bottom: 3.25rem;
       right: 3.25rem;
+
+      animation: assetsAppear 3s ease-in-out 12s;
+      animation-timeline: scroll()
     }
   }
 }
@@ -112,21 +150,16 @@
       padding-inline: 2rem;
 
       img[src*="opened"]{
-        width: 5.5rem;
-        height: 5.5rem;
-      }
-
-      .subtitle{
-        line-height: 2;
-      }
-
-      img[src*="opened"]{
         width: 4.5rem;
         height: 4.5rem;
 
         top: 4rem;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%), scale(0);
+      }
+
+      .subtitle{
+        line-height: 2;
       }
 
       img[src*="crystal"]{
@@ -135,8 +168,26 @@
 
         bottom: 4.25rem;
         right: 1rem;
-        transform: rotate(-45deg);
+        transform: rotate(-45deg), scale(0);
       }
     }
+  }
+}
+
+@keyframes textAppear {
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes paintBlue{
+  100%{
+    color: var(--blue-light);
+  }
+}
+
+@keyframes assetsAppear {
+  100%{
+    transform: scale(1);
   }
 }
