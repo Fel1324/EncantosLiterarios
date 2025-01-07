@@ -15,10 +15,8 @@
   }
 
   .hero-image{
-    background: url("../../assets/imgs/hero-image.png") no-repeat center top / cover;
-    min-height: 29rem;
-
-    position: sticky;
+    background: url("../../assets/imgs/hero-image.png") no-repeat center bottom / cover;
+    position: relative;
     z-index: 100;
 
     .content{
@@ -58,58 +56,22 @@
       margin-inline: auto;
       font-size: var(--subtitle);
       line-height: 1.4;
-      
-      span{
-        opacity: .5;
-
-        &.first-span{
-          animation: textAppear 150ms ease-in-out forwards;
-
-          & > strong{
-            animation: paintBlue 150ms ease-in-out forwards;
-
-          }
-        }
-
-        &.second-span{
-          animation: textAppear 150ms ease-in-out 1s forwards;
-
-          & > strong{
-            animation: paintBlue 150ms ease-in-out 1s forwards;
-
-          }
-        }
-
-        &.third-span{
-          animation: textAppear 150ms ease-in-out 2s forwards;
-
-          & > strong{
-            animation: paintBlue 150ms ease-in-out 2s forwards;
-          }
-        }
-      }
     }
 
     img[src*="opened"], img[src*="crystal"]{
       position: absolute;
       width: 2.5rem;
       height: 2.5rem;
-
-      transform: scale(0);
     }
 
     img[src*="opened"]{
       top: 2rem;
       right: 4.5rem;
-
-      animation: assetsAppear 350ms ease-in-out forwards;
     }
 
     img[src*="crystal"]{
       bottom: 3.25rem;
       right: 3.25rem;
-
-      animation: assetsAppear 250ms ease-in-out 2s forwards;
     }
   }
 }
@@ -121,7 +83,7 @@
     }
 
     .hero-image{
-      min-height: 59.25rem;
+      width: 100%;
 
       .content{
         margin-top: 10.25rem;
@@ -165,23 +127,5 @@
         transform: rotate(-45deg), scale(0);
       }
     }
-  }
-}
-
-@keyframes textAppear {
-  100%{
-    opacity: 1;
-  }
-}
-
-@keyframes paintBlue{
-  100%{
-    color: var(--blue-light);
-  }
-}
-
-@keyframes assetsAppear {
-  100%{
-    transform: scale(1);
   }
 }
