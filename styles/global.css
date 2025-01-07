@@ -57,8 +57,20 @@ a{
 }
 
 h1{
+  color: var(--text-title);
   font-size: var(--title-lg);
   font-weight: 700;
+}
+
+h2{
+  font-size: var(--title-sm);
+  font-weight: 700;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: top;
+  object-fit: cover;
 }
 
 @media screen and (width >= 1280px) {
