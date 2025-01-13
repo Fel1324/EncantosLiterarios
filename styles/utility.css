@@ -4,12 +4,24 @@
   margin-inline: auto;
 }
 
+.desktop-only{
+  display: none; 
+}
+
 .px-md{
   padding-inline: 1.25rem;
 }
 
 .px-lg{
   padding-inline: 2rem;
+}
+
+.title-card-pink{
+  color: var(--pink-light);
+}
+
+.title-card-blue{
+  color: var(--blue-light);
 }
 
 .btn{
@@ -35,5 +47,11 @@
   background-color: var(--blue-dark);
   &:hover{
     background-color: var(--blue-mid);
+  }
+}
+
+@media screen and (width >= 1280px) {
+  .desktop-only{
+    display: initial;
   }
 }

@@ -1,9 +1,9 @@
 .kit{
   width: 100%;
-  text-align: center;
-  margin-top: 4.5rem;
+  padding-block: 6.5rem 5.5rem;
 
   .container > header{
+    text-align: center;
     position: relative;
     z-index: 1;
 

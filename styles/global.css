@@ -63,8 +63,13 @@ h1{
 }
 
 h2{
+  text-align: center;
   font-size: var(--title-sm);
   font-weight: 700;
+}
+
+ul{
+  list-style-type: none;
 }
 
 img{
