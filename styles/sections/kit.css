@@ -51,7 +51,7 @@
 
 .kit-animation{
   max-width: 23.4375rem;
-  margin: 4rem auto 0;
+  margin: 7rem auto 0;
   position: relative;
 
   &::after{
@@ -74,18 +74,54 @@
     position: relative;
     z-index: 100;
 
-    & > .pin > img{
+    & small{
+      font-size: .625rem;
+
+      &:nth-child(1){
+        position: absolute;
+        top: -9%;
+        left: 7%;
+      }
+
+      &:nth-child(4){
+        position: absolute;
+        bottom: 74%;
+        left: 7%;
+      }
+    }
+
+    & img.arrow[src*="first-arrow"]{
+      position: absolute;
+      left: 15.5%;
+      top: -3%
+    }
+
+    & img.book{
+      width: 9.875rem;
+      height: 13rem;
+      display: block;
+      margin-inline: auto;
+    }
+
+    & img.arrow[src*="second-arrow"]{
+      position: absolute;
+      bottom: 59%;
+      left: 11.75%;
+    }
+
+    & img.pin{
+      transform: rotate(-7.55deg);
+      position: absolute;
+      z-index: -1;
+      bottom: 41%;
+      left: 16.75%;
+
       width: 4.625rem;
       height: 5.25rem;
     }
-  
-    & > .book > img{
-      width: 9.75rem;
-      height: 12.875rem;
-    }
-  
-    & > .bookmark > img{
-      width: 3.625rem;    
+
+    & img.bookmark{
+      width: 3.625rem;
       height: 11.25rem;
     }
   }
