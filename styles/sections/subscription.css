@@ -102,3 +102,9 @@
     margin-right: 2rem;
   }
 }
+
+@media screen and (width >= 1008px) {
+  .cards{
+    justify-content: center;
+  }
+}

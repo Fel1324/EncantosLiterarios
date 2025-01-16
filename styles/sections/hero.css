@@ -11,7 +11,7 @@
     background-color: var(--pink-low);
     filter: blur(18.75rem);
     width: 100%;
-    height: inherit;
+    height: 37rem;
   }
 }
 

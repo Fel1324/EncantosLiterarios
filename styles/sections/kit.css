@@ -57,8 +57,8 @@
   &::after{
     content: "";
     display: block;
-    width: 18.625rem;
-    height: 18.625rem;
+    width: 18rem;
+    height: 18rem;
 
     background-color: var(--pink-low);
     filter: blur(130px);
