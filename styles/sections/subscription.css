@@ -10,8 +10,20 @@
 .cards{
   display: flex;
   gap: 1rem;
-  
+
+  padding-bottom: .75rem;
   overflow: auto;
+  &::-webkit-scrollbar{
+    background: var(--shape-base);
+    height: .375rem;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: radial-gradient(var(--pink-dark) 0%, var(--blue-dark) 100%);
+    border-radius: .375rem;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background: radial-gradient(var(--pink-base) 0%, var(--blue-base) 100%);
+  }
 
   & .card{
     background-color: var(--shape-base);
@@ -100,6 +112,13 @@
 
   & .card:nth-child(3){
     margin-right: 2rem;
+  }
+}
+
+@-moz-document url-prefix(){
+  .cards{
+    scrollbar-width: thin;
+    scrollbar-color: var(--shape-stroke) var(--shape-base);
   }
 }
 
