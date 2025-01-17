@@ -87,6 +87,7 @@
   img[src*="opened"]{
     top: 2rem;
     right: 4.5rem;
+    rotate: 20deg;
   }
 
   img[src*="crystal"]{
@@ -99,6 +100,7 @@
   .hero{
     &::before{
       filter: blur(68rem);
+      height: 70rem;
     }
   }
 
@@ -130,13 +132,43 @@
       height: 4.5rem;
   
       top: 4rem;
-      left: 50%;
-      transform: translateX(-50%), scale(0);
+      left: 45.5%;
+
+      scale: 0;
+      transition: scale .3s ease-in-out, rotate 250ms ease-in-out;
+      &:hover{
+        rotate: 32deg;
+      }
     }
   
     .subtitle{
       line-height: 2;
-      opacity: .5;
+      & > .first-span{
+        opacity: .5;
+        transition: opacity .3s ease-in-out;
+
+        & > strong{
+          transition: color .3s ease-in-out;
+        }
+      }
+
+      & > .second-span{
+        opacity: .5;
+        transition: opacity .3s ease-in-out;
+
+        & > strong{
+          transition: color .3s ease-in-out;
+        }
+      }
+
+      & > .third-span{
+        opacity: .5;
+        transition: opacity .3s ease-in-out;
+
+        & > strong{
+          transition: color .3s ease-in-out;
+        }
+      }
     }
   
     img[src*="crystal"]{
@@ -145,11 +177,57 @@
   
       bottom: 4.25rem;
       right: 1rem;
-      transform: rotate(-45deg), scale(0);
+      
+      scale: 0;
+      rotate: -30deg;
+      transition: scale .3s ease-in-out;
+      &:hover{
+        rotate: -14deg;
+      }
+    }
+
+    &:hover{
+      & img[src*="opened"]{
+        scale: 1;
+      }
+
+      & .subtitle{
+        & .first-span{
+          opacity: 1;
+
+          & > strong{
+            color: var(--blue-light);
+          }
+        }
+
+        & .second-span{
+          opacity: 1;
+          transition: opacity .3s ease-in-out .5s;
+
+          & > strong{
+            color: var(--blue-light);
+            transition: color .3s ease-in-out .5s;
+          }
+        }
+
+        & .third-span{
+          opacity: 1;
+          transition: opacity .3s ease-in-out 1s;
+
+          & > strong{
+            color: var(--blue-light);
+            transition: color .3s ease-in-out 1s;
+          }
+        }
+      }
+
+      & img[src*="crystal"]{
+        scale: 1;
+        transition: scale .3s ease-in-out 1s, rotate 250ms ease-in-out;
+      }
     }
   }
 }
-
 
 @keyframes Appear{
   to{
