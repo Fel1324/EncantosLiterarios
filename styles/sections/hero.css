@@ -127,7 +127,7 @@
     margin-top: 6rem;
     padding-inline: 2rem;
   
-    img[src*="opened"]{
+    & img[src*="opened"]{
       width: 4.5rem;
       height: 4.5rem;
   
@@ -141,7 +141,7 @@
       }
     }
   
-    .subtitle{
+    & .subtitle{
       line-height: 2;
       & > .first-span{
         opacity: .5;
@@ -171,7 +171,7 @@
       }
     }
   
-    img[src*="crystal"]{
+    & img[src*="crystal"]{
       width: 4.5rem;
       height: 4.5rem;
   

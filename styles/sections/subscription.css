@@ -127,3 +127,9 @@
     justify-content: center;
   }
 }
+
+@media screen and (width >= 1280px) {
+  #subscription h2{
+    max-width: 18.375rem;
+  }
+}
