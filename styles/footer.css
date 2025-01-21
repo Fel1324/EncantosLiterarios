@@ -35,9 +35,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.75rem;
+    gap: .875rem;
     
-    padding-top: 1.25rem;
+    padding-top: .75rem;
+
+    & li{
+      width: 2.5rem;
+      height: 2.5rem;
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > a{
+        width: 1.5rem;
+        height: 1.5rem;
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & svg path{
+          transition: fill 250ms ease-in-out;
+        }
+      }
+
+      &:hover a svg path{
+        fill: var(--text-body);
+      }
+
+      &:after{
+        content: "";
+        display: block;
+        scale: 0;
+
+        background-color: var(--shape-stroke);
+        border-radius: 50%;
+
+        position: absolute;
+        inset: 0;
+        transition: scale 250ms ease-in-out;
+      }
+
+      &:hover::after{
+        scale: 1;
+      }
+    }
   }
 }
 
@@ -63,6 +109,10 @@
 
       &:nth-child(3){
         margin-block: 1rem;
+      }
+
+      &:hover{
+        color: var(--text-body);
       }
     }
   }

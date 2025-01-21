@@ -34,14 +34,46 @@
   cursor: pointer;
   border-radius: .5rem;
   border: 0;
+
+  position: relative;
+  overflow: hidden;
+
+  & > span{
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after{
+    content: "";
+    display: block;
+
+    width: 0;
+    height: 2.5rem;
+    margin-inline: auto;
+    border-radius: inherit;
+
+    position: absolute;
+    inset: 0;
+    transition: width 250ms ease-in-out, background-color 250ms ease-in-out;
+  }
+
+  &:hover::after{
+    width: 100%;
+  }
 }
 
 .primary-btn{
   background-color: var(--pink-dark);
+  &:hover::after{
+    background-color: var(--pink-base);
+  }
 }
 
 .secondary-btn{
   background-color: var(--blue-dark);
+  &:hover::after{
+    background-color: var(--blue-mid);
+  }
 }
 
 @media screen and (width >= 1280px) {
