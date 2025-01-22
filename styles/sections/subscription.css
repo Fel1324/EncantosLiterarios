@@ -139,12 +139,16 @@
     & h2{
       max-width: 18.375rem;
       margin-bottom: 3.5rem;
+
+      position: relative;
+      z-index: 1;
     }
   }
 
   .cards{
     overflow: initial;
     padding-top: 5rem;
+    position: relative;
 
     &:hover{
       .card:nth-child(1){
@@ -257,6 +261,18 @@
           rotate: 12deg;
         }
       }
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 55rem;
+      height: 55rem;
+      left: calc(50% - 55rem/2);
+      top: calc(50% - 55rem/2 - 2.75rem);
+
+      background: var(--shape-base);
+      filter: blur(17rem);
     }
   }
 }
