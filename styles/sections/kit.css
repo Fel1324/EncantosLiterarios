@@ -77,21 +77,19 @@
 
     & small{
       font-size: .625rem;
+      position: absolute;
 
       &:first-child{
-        position: absolute;
         top: -16%;
         left: 7%;
       }
 
       &:nth-child(4){
-        position: absolute;
         bottom: 49%;
         left: 7%;
       }
 
       &:last-child{
-        position: absolute;
         bottom: -24%;
         right: 10.5%;
       }
@@ -154,6 +152,106 @@
       position: absolute;
       bottom: -14%;
       right: 12%;
+    }
+  }
+}
+
+@media screen and (width >= 1280px) {
+  .kit{
+    padding-block: 13rem;
+  }
+
+  .kit-animation{
+    max-width: 80rem;
+    margin-top: 15.5rem;
+
+    &::after{
+      content: "";
+      position: absolute;
+      width: 58.125rem;
+      height: 58.125rem;
+      left: calc(50% - 58.125rem/2);
+      top: calc(50% - 58.125rem/2 + 2.375rem);
+
+      background: var(--pink-low);
+      opacity: 0.5;
+      filter: blur(18.75rem);
+    }
+
+    .kit-animation-images{
+      transform: translateX(-1.75%);
+  
+      & small{
+        font-size: 1rem;
+        line-height: 1.4;
+  
+        &:first-child{
+          top: -10%;
+          left: 15.5%;
+        }
+  
+        &:nth-child(4){
+          bottom: 43.75%;
+          left: 16%;
+        }
+  
+        &:last-child{
+          bottom: -17.75%;
+          right: 21%;
+        }
+      }
+  
+      & img.arrow[src*="first-arrow"]{
+        width: 10.9375rem;
+        height: 1.875rem;
+
+        left: 21%;
+        top: -2.75%
+      }
+  
+      & img.book{
+        width: 29.1875rem;
+        height: 38.5625rem;
+      }
+  
+      & img.arrow[src*="second-arrow"]{
+        width: 6.5625rem;
+        height: 7.9375rem;
+
+        bottom: 19%;
+        left: 17.55%;
+      }
+  
+      & img.pin{
+        bottom: -13.5%;
+        left: 21%;
+  
+        width: 13.875rem;
+        height: 15.875rem;
+      }
+  
+      & img.bookmark{
+        width: 10.75rem;
+        height: 33.5rem;
+  
+        &[src*="bookmark-yellow"]{
+          top: -10.5%;
+          right: 22.5%;
+        }
+  
+        &[src*="bookmark-purple"]{
+          top: 6.5%;
+          right: 13.65%;
+        }
+      }
+  
+      & img.arrow[src*="third-arrow"]{
+        width: 8.5rem;
+        height: 8.5rem;
+
+        bottom: -10.75%;
+        right: 18%;
+      }
     }
   }
 }
