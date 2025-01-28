@@ -192,13 +192,15 @@
         }
   
         &:nth-child(4){
-          bottom: 43.75%;
-          left: 16%;
+          bottom: 53%;
+          left: 37%;
+          transition: bottom .35s ease-in-out, left .35s ease-in-out;
         }
   
         &:last-child{
-          bottom: -17.75%;
-          right: 21%;
+          bottom: 10%;
+          right: 37.25%;
+          transition: bottom .35s ease-in-out, right .35s ease-in-out;
         }
       }
   
@@ -220,16 +222,19 @@
         width: 6.5625rem;
         height: 7.9375rem;
 
-        bottom: 19%;
-        left: 17.55%;
+        bottom: 30%;
+        left: 37%;
+        transition: bottom .35s ease-in-out, left .35s ease-in-out;
       }
   
       & img.pin{
-        bottom: -13.5%;
-        left: 21%;
-  
         width: 13.875rem;
         height: 15.875rem;
+
+        bottom: 2%;
+        left: 40%;
+        transform: rotate(0);
+        transition: bottom .35s ease-in-out, left .35s ease-in-out, transform .35s ease-in-out;
       }
   
       & img.bookmark{
@@ -237,13 +242,17 @@
         height: 33.5rem;
   
         &[src*="bookmark-yellow"]{
-          top: -10.5%;
-          right: 22.5%;
+          top: 10%;
+          right: 33%;
+          transform: rotate(0);
+          transition: top .35s ease-in-out, right .35s ease-in-out, transform .35s ease-in-out;
         }
   
         &[src*="bookmark-purple"]{
-          top: 6.5%;
-          right: 13.65%;
+          top: 10%;
+          right: 33%;
+          transform: rotate(0);
+          transition: top .35s ease-in-out, right .35s ease-in-out, transform .35s ease-in-out;
         }
       }
   
@@ -251,8 +260,9 @@
         width: 8.5rem;
         height: 8.5rem;
 
-        bottom: -10.75%;
-        right: 18%;
+        bottom: 12%;
+        right: 34%;
+        transition: bottom .35s ease-in-out, right .35s ease-in-out;
       }
     }
 
@@ -262,11 +272,51 @@
           top: -9%;
           left: 15.5%;
         }
+
+        &:nth-child(4){
+          bottom: 42.75%;
+          left: 16%;
+        }
+
+        &:last-child{
+          bottom: -17%;
+          right: 21%;
+        }
       }
 
       & img.arrow[src*="first-arrow"]{
         left: 21%;
         top: -2.75%;
+      }
+
+      & img.arrow[src*="second-arrow"]{
+        bottom: 19%;
+        left: 17.55%;
+      }
+
+      & img.pin{
+        transform: rotate(-7.55deg);
+        bottom: -13.5%;
+        left: 21%;
+      }
+
+      & img.bookmark{
+        &[src*="bookmark-yellow"]{
+          top: -10.5%;
+          right: 22.5%;
+          transform: rotate(12deg);
+        }
+
+        &[src*="bookmark-purple"]{
+          top: 6.5%;
+          right: 13.65%;
+          transform: rotate(22deg);
+        }
+      }
+
+      & img.arrow[src*="third-arrow"]{
+        bottom: -10.75%;
+        right: 18%;
       }
     }
   }
